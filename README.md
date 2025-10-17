@@ -10,7 +10,7 @@ This project demonstrates modern web design, an intuitive booking flow, and perf
 ---
 
 ## 🌐 Live Demo
-**Live Site:** https://northern-standard.surge.sh
+**Live Site:** https://acceptable-bears.surge.sh
 
 ---
 
