@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trailer | Northern Standard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/ios-filled/50/000000/shipped.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header will be loaded by JavaScript -->
+    <div id="header"></div>
+
+    <!-- Booking Section -->
+    <section class="booking">
+        <div class="container">
+            <h2>Book Your Trailer</h2>
+            <div class="booking-container">
+                <div class="booking-form">
+                    <h3>Schedule Your Delivery</h3>
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Delivery Address</label>
+                            <input type="text" id="address" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Select Trailer Size</label>
+                            <div class="trailer-options">
+                                <div class="trailer-option selected" data-size="10ft">
+                                    <h4>10ft Trailer</h4>
+                                    <p>$85/day</p>
+                                </div>
+                                <div class="trailer-option" data-size="14ft">
+                                    <h4>14ft Trailer</h4>
+                                    <p>$125/day</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="delivery-date">Delivery Date</label>
+                            <input type="date" id="delivery-date" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="return-date">Return Date</label>
+                            <input type="date" id="return-date" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="special-requests">Special Requests</label>
+                            <textarea id="special-requests" class="form-control" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Proceed to Payment</button>
+                    </form>
+                </div>
+                <div class="booking-info">
+                    <h3>Service Area</h3>
+                    <p>We currently serve the following areas:</p>
+                    <ul>
+                        <li>Metro City</li>
+                        <li>North Suburbs</li>
+                        <li>South Suburbs</li>
+                        <li>East County</li>
+                        <li>West County</li>
+                    </ul>
+                    <p>Delivery fees may apply outside our primary service area.</p>
+                    
+                    <h3>Payment Information</h3>
+                    <p>A secure one-time deposit is required to confirm your booking. We accept all major credit cards and PayPal.</p>
+                    
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-discover"></i>
+                        <i class="fab fa-paypal"></i>
+                    </div>
+                    
+                    <h3>Trailer Details</h3>
+                    <div class="trailer-details">
+                        <div class="trailer-detail">
+                            <h4>10ft Trailer</h4>
+                            <ul>
+                                <li>Capacity: 3-4 cubic yards</li>
+                                <li>Load Capacity: 5,000 lbs</li>
+                                <li>Hydraulic lift system</li>
+                            </ul>
+                        </div>
+                        <div class="trailer-detail">
+                            <h4>14ft Trailer</h4>
+                            <ul>
+                                <li>Capacity: 6-7 cubic yards</li>
+                                <li>Load Capacity: 7,000 lbs</li>
+                                <li>Heavy-duty hydraulic system</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer will be loaded by JavaScript -->
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Booking-specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Trailer Selection
+            const trailerOptions = document.querySelectorAll('.trailer-option');
+            trailerOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    trailerOptions.forEach(opt => opt.classList.remove('selected'));
+                    this.classList.add('selected');
+                });
+            });
+
+            // Form Submission
+            document.getElementById('bookingForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your booking! You will be redirected to the secure payment page.');
+                // In a real implementation, this would redirect to a payment gateway
+            });
+
+            // Set minimum date for delivery to today
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('delivery-date').setAttribute('min', today);
+            document.getElementById('return-date').setAttribute('min', today);
+        });
+    </script>
+</body>
+</html>

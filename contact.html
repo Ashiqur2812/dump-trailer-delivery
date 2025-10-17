@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Northern Standard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/ios-filled/50/000000/shipped.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header will be loaded by JavaScript -->
+    <div id="header"></div>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>Have questions about our trailers or service? Reach out to us - we're happy to help!</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Our Location</h4>
+                                <p>123 Industrial Way, Metro City, MC 12345</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Phone Number</h4>
+                                <p>(555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email Address</h4>
+                                <p>info@northernstandard.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Monday - Sunday: 7:00 AM - 7:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3>Service Area</h3>
+                    <p>We proudly serve the following areas with reliable dump trailer rentals:</p>
+                    <ul>
+                        <li>Metro City</li>
+                        <li>North Suburbs</li>
+                        <li>South Suburbs</li>
+                        <li>East County</li>
+                        <li>West County</li>
+                    </ul>
+                    <p>Contact us to inquire about service in surrounding areas.</p>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contact-name">Your Name</label>
+                            <input type="text" id="contact-name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Your Email</label>
+                            <input type="email" id="contact-email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Subject</label>
+                            <input type="text" id="contact-subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" class="form-control" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2>About Northern Standard</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Northern Standard has been providing reliable dump trailer rental services to the greater metro area for over 10 years. We understand that your projects demand dependable equipment and timely service.</p>
+                    <p>Our commitment to quality, safety, and customer satisfaction has made us the preferred choice for contractors, landscapers, and homeowners alike.</p>
+                    
+                    <h3>Why Choose Us</h3>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Quality Equipment</h4>
+                            <p>Our trailers are regularly maintained and inspected to ensure they're ready for your toughest jobs.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-truck-fast"></i>
+                            <h4>On-Time Delivery</h4>
+                            <p>We understand time is money. Our delivery service is prompt and reliable.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-headset"></i>
+                            <h4>Expert Support</h4>
+                            <p>Our team is here to help with any questions before, during, or after your rental.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Our team at work">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer will be loaded by JavaScript -->
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Contact-specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+            });
+        });
+    </script>
+</body>
+</html>
